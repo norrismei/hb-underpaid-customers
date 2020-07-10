@@ -1,5 +1,20 @@
-melon_cost = 1.00
 
+def find_overpaid_underpaid(file, cost):
+  """Reads file and identifies customers who have overpaid or underpaid"""
+  for line in file:
+    line = line.strip() #Strips whitespace of each line
+    order = line.split("|") #Creates list of tokens, using "|"" as separator
+    order_no, customer_name, quantity, amt_paid = order
+    
+
+def main():
+  melon_cost = 1.00
+  file = open("customer-orders.txt")
+  find_overpaid_underpaid(file, melon_cost)
+
+main()
+
+"""
 customer1_name = "Joe"
 customer1_melons = 5
 customer1_paid = 5.00
@@ -58,4 +73,4 @@ customer6_expected = customer6_melons * melon_cost
 if customer6_expected != customer6_paid:
     print(f"{customer6_name} paid ${customer6_paid:.2f},",
           f"expected ${customer6_expected:.2f}"
-          )
+          )"""
